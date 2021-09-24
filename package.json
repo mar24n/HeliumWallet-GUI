@@ -1,0 +1,98 @@
+{
+  "name": "heliumwallet",
+  "version": "1.0.0",
+  "description": "HeliumWallet",
+  "main": "main.js",
+  "author": "mar24n <piotr@dec.sx> (https://test.com)",
+  "homepage": "http://./",
+  "license": "FreeSource",
+  "dependencies": {
+    "shelljs": "^0.8.4",
+    "system-commands": "^1.1.7"
+  },
+  "devDependencies": {
+    "electron": "^14.0.0",
+    "electron-builder": "^22.11.7"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder build"
+  },
+  "build": {
+    "productName": "HeliumWallet",
+    "appId": "com.heliumwallet.app",
+    "win": {
+      "target": "nsis",
+      "extraFiles": [
+        {
+          "from": "./resources/win/",
+          "to": "./wallet/",
+          "filter": [
+            "**/*"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "createStartMenuShortcut": true,
+      "createDesktopShortcut": true
+    },
+    "linux": {
+      "icon": "build/icons",
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "extraFiles": [
+        {
+          "from": "./resources/linux/",
+          "to": "./wallet/",
+          "filter": [
+            "**/*"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities",
+      "icon": "build/icon.icns",
+      "extraFiles": [
+        {
+          "from": "./resources/mac/",
+          "to": "./wallet/",
+          "filter": [
+            "**/*"
+          ]
+        }
+      ]
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "dist/"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mar24n/HeliumWallet-GUI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mar24n/HeliumWallet-GUI/issues"
+  }
+}
