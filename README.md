@@ -41,6 +41,9 @@ For existing CLI wallets , copy Your `wallet.key` to:
 - Mac - `/Applications/HeliumWallet.app/Contents/wallet/`
 
 
+
+
+
 You can support the project donating any HNT to :
 `134JGdUZauF3c8zxF9yzipGdojv6XGSmW5exCDiQM1wWJfGXXXY`
 
