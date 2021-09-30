@@ -36,7 +36,7 @@ Download lates wallet from [Releases](https://github.com/mar24n/HeliumWallet-Gui
 
 To create new wallet click on `Helium Wallet` and `Create Wallet` in top menu.
 For existing CLI wallets , copy Your `wallet.key` to:
-- Windows - 
+- Windows - `C:\Users\[user]\AppData\Local\Programs\Helim Wallet\HeliumWallet/wallet/`
 - Linux - `~/wallet/`
 - Mac - `/Applications/HeliumWallet.app/Contents/wallet/`
 
